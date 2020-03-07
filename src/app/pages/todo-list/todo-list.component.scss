@@ -1,0 +1,19 @@
+div {
+  &.container {
+    padding: 20px;
+  }
+
+  &.add {
+    width: 200px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+button {
+  &.add {
+    margin: 30px;
+    background-color: rgb(224, 224, 224);
+  }
+}

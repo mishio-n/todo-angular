@@ -1,0 +1,61 @@
+mat-card {
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 100px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+mat-card-subtitle {
+  padding-top: 10px;
+}
+
+mat-icon {
+  &.subtitle {
+    padding-right: 10px;
+  }
+
+  &.gray {
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+span {
+  &.subtitle {
+    display: flex;
+    align-items: center;
+  }
+}
+
+button {
+  &.delete {
+    position: absolute;
+    right: 16px;
+    color: rgba(128, 128, 128, 0.95);
+  }
+}
+
+p {
+  &.content {
+    display: flex;
+    align-items: center;
+  }
+
+  &.deadline {
+    font-size: larger;
+  }
+
+  &.detail {
+    padding-top: 5px;
+    margin-bottom: 0px;
+  }
+}
+
+div {
+  &.topper {
+    height: 3px;
+    background-color: red;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

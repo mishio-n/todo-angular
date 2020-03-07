@@ -1,0 +1,28 @@
+<div class="topper"></div>
+<mat-card>
+  <mat-card-title>{{ todo.task }}</mat-card-title>
+  <mat-card-subtitle>
+    <span class="subtitle">
+      <mat-icon class="subtitle">account_circle</mat-icon>
+      {{ todo.user }}
+    </span>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p class="content deadline">
+      <mat-icon class="subtitle gray">update</mat-icon>
+      {{ todo.deadline | date: 'yyyy-MM-dd' }}
+    </p>
+    <p class="content"><mat-icon class="subtitle gray">description</mat-icon>{{ todo.memo }}</p>
+    <mat-divider></mat-divider>
+    <p class="detail">作成日 {{ todo.createdAt | date: 'yyyy-MM-dd' }}</p>
+    <p class="detail">更新日 {{ todo.updatedAt | date: 'yyyy-MM-dd' }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button class="edit" [disabled]="!todo.isDone"><mat-icon>edit</mat-icon></button>
+    <button mat-icon-button class="done" *ngIf="todo.isDone; else open"><mat-icon>done_outline</mat-icon></button>
+    <ng-template #open>
+      <button mat-icon-button class="open"><mat-icon>undo</mat-icon></button>
+    </ng-template>
+    <button mat-icon-button class="delete"><mat-icon>delete</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
