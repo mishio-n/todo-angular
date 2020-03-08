@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TodoListModule } from './pages/todo-list/todo-list.module';
-import { SettingModule } from './pages/setting/setting.module';
 
 const routes: Routes = [
   {
@@ -11,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'todo-list',
-    loadChildren: () => TodoListModule,
+    loadChildren: () => import('./pages/todo-list/todo-list.module').then(m => m.TodoListModule),
   },
   {
     path: 'setting',
-    loadChildren: () => SettingModule,
+    loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingModule),
   },
 ];
 

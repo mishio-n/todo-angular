@@ -1,4 +1,9 @@
 <app-header [title]="title"></app-header>
-<div class="page">
-  <router-outlet></router-outlet>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="isSidenavOpen">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <div class="page">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

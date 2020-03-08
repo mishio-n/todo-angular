@@ -1,6 +1,6 @@
 <div class="container" fxLayout="row wrap" fxLayoutGap="24px grid">
   <div class="add">
-    <button mat-icon-button class="add"><mat-icon class="add" [color]="'primary'">add</mat-icon></button>
+    <button mat-flat-button class="add"><mat-icon class="add">add</mat-icon></button>
   </div>
   <ng-container *ngFor="let todo of todos$ | async">
     <app-todo-list-item [todo]="todo"></app-todo-list-item>
