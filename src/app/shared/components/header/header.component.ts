@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() title = '';
+
+  toggleSidebar() {
+    // this.store.dispatch(LayoutActions.toggleSidebar());
+  }
 }

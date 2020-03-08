@@ -1,7 +1,14 @@
 <mat-toolbar color="primary">
-  <span class="title">{{ title }}</span>
-  <span class="toolbar-nav">
-    <a mat-button routerLink="/todo-list">TODO一覧</a>
-    <a mat-button routerLink="/setting">設定</a>
-  </span>
+  <button mat-icon-button (click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+    <span></span>
+  </button>
+  <div class="title">
+    <h1 class="title">{{ title }}</h1>
+  </div>
 </mat-toolbar>
+
+<!-- <span class="toolbar-nav">
+  <a mat-button routerLink="/todo-list">TODO一覧</a>
+  <a mat-button routerLink="/setting">設定</a>
+</span> -->

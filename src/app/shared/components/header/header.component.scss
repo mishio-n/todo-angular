@@ -3,3 +3,12 @@ span {
     padding-left: 32px;
   }
 }
+
+mat-toolbar {
+  align-items: center;
+  display: flex;
+
+  div {
+    padding-left: 40%;
+  }
+}

@@ -3,11 +3,14 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-v9-template": {
+    "todo-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@ngrx/schematics:component": {
+          "styleext": "scss"
         }
       },
       "root": "",
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-v9-template",
+            "outputPath": "dist/todo-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-v9-template:build"
+            "browserTarget": "todo-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-v9-template:build:production"
+              "browserTarget": "todo-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-v9-template:build"
+            "browserTarget": "todo-angular:build"
           }
         },
         "test": {
@@ -116,16 +119,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-v9-template:serve"
+            "devServerTarget": "todo-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-v9-template:serve:production"
+              "devServerTarget": "todo-angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-v9-template"
+  "defaultProject": "todo-angular",
+  "cli": {
+    "analytics": "555ea7bd-c626-4a34-a761-de4421cbfb4a",
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
