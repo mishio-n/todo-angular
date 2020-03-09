@@ -1,6 +1,6 @@
 <app-header [title]="title"></app-header>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="isSidenavOpen">
+  <mat-sidenav #sidenav [mode]="sidenavMode$ | async" [opened]="isSidenavOpen$ | async">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
   <div class="page">

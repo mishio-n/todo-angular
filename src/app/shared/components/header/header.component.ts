@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { toggleSidebar } from 'src/app/store/actions/layout.actions';
+import { SidenavState } from 'src/app/store/reducers';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +11,9 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input() title = '';
 
-  toggleSidebar() {
-    // this.store.dispatch(LayoutActions.toggleSidebar());
+  constructor(private store: Store<SidenavState>) {}
+
+  toggleSidenav() {
+    this.store.dispatch(toggleSidebar());
   }
 }

@@ -1,4 +1,4 @@
-<div class="topper"></div>
+<div class="topper" [ngClass]="{ over: !todo.isDone }"></div>
 <mat-card>
   <mat-card-title>{{ todo.task }}</mat-card-title>
   <mat-card-subtitle>
